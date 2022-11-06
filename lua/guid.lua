@@ -35,11 +35,11 @@ function M.setup(setting)
 
 	vim.tbl_extend("force", config, setting)
 
-	vim.keymap.set("n", config.upperCaseShortCut, "i" + M.create(true), {
+	vim.keymap.set("n", config.upperCaseShortCut, "i" .. M.create(true), {
 		expr = true,
 		desc = "GUID Upper",
 	})
-	vim.keymap.set("n", config.lowerCaseShortCut, "i" + M.create(false), {
+	vim.keymap.set("n", config.lowerCaseShortCut, "i" .. M.create(false), {
 		expr = true,
 		desc = "GUID Lower",
 	})
