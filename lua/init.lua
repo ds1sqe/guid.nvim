@@ -29,8 +29,8 @@ local M = {}
 -- }
 function M.config(setting)
 	local config = {
-		upperCaseShortCut = "<space>guu",
-		lowerCaseShortCut = "<space>gul",
+		upperCaseShortCut = "<space>cuu",
+		lowerCaseShortCut = "<space>cul",
 	}
 
 	vim.tbl_extend("force", config, setting)
