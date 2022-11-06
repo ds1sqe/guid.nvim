@@ -35,16 +35,22 @@ function M.setup(setting)
 
 	vim.tbl_extend("force", config, setting)
 
-	vim.keymap.set("n", config.upperCaseShortCut, "i " .. M.create(true), {
+	vim.keymap.set("n", config.upperCaseShortCut, function()
+		local str = "i " .. M.create(true)
+		return str
+	end, {
 		expr = true,
 		desc = "GUID Upper",
 	})
-	vim.keymap.set("n", config.lowerCaseShortCut, "i " .. M.create(false), {
+	vim.keymap.set("n", config.lowerCaseShortCut, function()
+		local str = "i " .. M.create(false)
+		return str
+	end, {
 		expr = true,
 		desc = "GUID Lower",
 	})
 end
---
+
 -- opt is boolean to create uuid, true to uppercase
 -- false to lowercase
 -- returns string
