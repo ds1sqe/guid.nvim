@@ -27,7 +27,7 @@ local M = {}
 -- 	upperCaseShortCut = "<space>guu",
 -- 	lowerCaseShortCut = "<space>gul",
 -- }
-function M.config(setting)
+function M.setup(setting)
 	local config = {
 		upperCaseShortCut = "<space>cuu",
 		lowerCaseShortCut = "<space>cul",
